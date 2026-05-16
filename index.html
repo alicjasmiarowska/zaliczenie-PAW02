@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/output.css">
+    <title>Architech Agency</title>
+</head>
+<body class="bg-gray-100 text-dark font-sans">
+  
+  <!-- NAV -->
+<header>
+<nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-white backdrop-blur-sm">
+  <div class="max-w-7xl px-8 mx-auto">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <img src="./src/assets/logo.svg" alt="Architech Agency logo - Home" class="h-10">
+      </a>
+
+      <!-- Nav Links desktop -->
+      <div class="hidden lg:flex space-x-10 lg:text-[18px]">
+        <a href="#services" class="text-dark font-bold hover:text-primary transition-colors">Services</a>
+        <a href="#team" class="text-dark font-bold hover:text-primary transition-colors">Team</a>
+        <a href="#projects" class="text-dark font-bold hover:text-primary transition-colors">Projects</a>
+        <a href="#how" class="text-dark font-bold hover:text-primary transition-colors">How It Works</a>
+        <a href="#contact" class="text-dark font-bold hover:text-primary transition-colors">Contact</a>
+      </div>
+
+        <!-- Hamburger menu mobile -->
+         <button id="menu-btn" class="lg:hidden focus:outline-none">
+        <svg id="icon-open" class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 text-dark hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full right-0 w-50 bg-white p-4 flex flex-col gap-4 shadow-sm">
+        <a href="#services" class="text-dark font-bold hover:text-primary transition-colors">Services</a>
+        <a href="#team" class="text-dark font-bold hover:text-primary transition-colors">Team</a>
+        <a href="#projects" class="text-dark font-bold hover:text-primary transition-colors">Projects</a> 
+        <a href="#how" class="text-dark font-bold hover:text-primary transition-colors">How It Works</a>
+        <a href="#contact" class="text-dark font-bold hover:text-primary transition-colors">Contact</a>
+        
+        </div>
+    </div>
+    </div>
+</nav>
+</header>
+
+<main> 
+<!-- HERO -->
+<section id="hero" aria-label="Strona główna" class="bg-gray-100 pt-32 pb-20 lg:pt-48 lg:pb-32">
+
+  <!-- Kontener wyrównany z nav — max-w-7xl mx-auto -->
+  <div class="max-w-7xl mx-auto px-8 lg:flex lg:items-center lg:justify-between lg:gap-20">
+
+    <!-- Lewa kolumna — tekst -->
+    <div class="lg:flex-1 fade-in">
+      <h1>Your Best Design<br class="hidden lg:block"> Architect Agency</h1>
+    </div>
+
+    <!-- Prawa kolumna — przyciski -->
+    <div class="flex items-center gap-20 mt-8 lg:mt-0 lg:flex-shrink-0 fade-in delay-2">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="underline underline-offset-8 font-bold lg:text-[20px]">Get In Touch</a>
+    </div>
+
+  </div>
+</section>
+
+<section aria-label="Zdjęcie projektu" class="bg-cover bg-center h-screen flex flex-col justify-end lg:h-[60vh] lg:mx-20" 
+         style="background-image: url(./src/assets/building.jpg);">
+
+  <div class="w-full bg-linear-to-t from-black to-transparent px-8 pb-10 pt-48">
+
+    <div class="max-w-7xl mx-auto lg:px-8">
+
+      <hr class="bg-white border-0 h-px mb-6">
+
+      <div class="lg:flex lg:items-end lg:justify-between lg:mb-10">
+
+        <!-- Tekst — zmienia się przy kliknięciu strzałek -->
+        <div class="lg:max-w-lg">
+          <p id="slide-text" class="text-white transition-opacity duration-500 min-h-30">
+            Take a look at some of our recent projects to get an idea of the level of quality you can expect when you choose us for your next project.
+          </p>
+          <!-- Kropki nawigacji -->
+          <div class="flex gap-2 mt-4">
+            <span class="dot w-2 h-2 rounded-full bg-white opacity-100"></span>
+            <span class="dot w-2 h-2 rounded-full bg-white opacity-40"></span>
+            <span class="dot w-2 h-2 rounded-full bg-white opacity-40"></span>
+          </div>
+        </div>
+
+        <div class="flex gap-4 my-10 lg:my-0">
+          <button id="hero-prev" class="w-14 h-14 flex items-center justify-center rounded-full border border-white hover:bg-white/20 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button id="hero-next" class="w-14 h-14 flex items-center justify-center rounded-full border border-white hover:bg-white/20 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+  <!-- SERVICES                                                     -->
+  <!-- ZMIANA: nagłówek — lg:flex-row — tekst i opis obok siebie   -->
+  <!-- ZMIANA: karty — lg:grid lg:grid-cols-2 — siatka 2 kolumn    -->
+  <!-- ============================================================ -->
+<section id="services" aria-label="Nasze usługi" class="bg-black pb-20 lg:pb-40">
+
+<!-- ZMIANA: lg:flex-row lg:items-start lg:gap-20 — nagłówek obok opisu -->
+
+  <div class="max-w-7xl mx-auto px-8 py-20 lg:py-40 flex flex-col gap-10
+              lg:flex-row lg:items-start lg:gap-20 fade-in">
+    <h2 class="text-white lg:flex-1">We Build Your Dream House</h2>
+    <p class="text-white lg:flex-1">We specialize in turning your dream house into a reality. Our team of experienced professionals will work closely with you to understand your vision and create a custom plan to bring it to life.</p>
+  </div>
+
+  <!-- ZMIANA: lg:grid lg:grid-cols-2 — 2 kolumny na desktop -->
+  <!-- ZMIANA: lg:mx-20 — większy margines na desktop         --> 
+ 
+  <div class="max-w-7xl mx-auto px-8 lg:grid lg:grid-cols-2 lg:gap-20">
+
+  <!-- Karta 1 -->
+  <div class="flex flex-col lg:flex-row lg:gap-8 mt-10 lg:mt-0 fade-in delay-1">
+    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center border border-white text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+      </svg>
+    </div>
+    <div>
+      <h3 class="text-white pb-5 pt-10 lg:pt-0">Architectural Consultation</h3>
+      <p class="text-white pb-10">we offer comprehensive architectural consultation services to help clients bring their vision to life.</p>
+      <a href="#" class="text-white flex items-center gap-2">View Service
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Karta 2 -->
+  <div class="flex flex-col lg:flex-row lg:gap-8 pt-20 lg:pt-0 fade-in delay-2">
+    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center border border-white text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+      </svg>
+    </div>
+    <div>
+      <h3 class="text-white pb-5 pt-10 lg:pt-0">Architectural Design</h3>
+      <p class="text-white pb-10">we specialize in creating innovative, functional, and visually stunning architectural designs.</p>
+      <a href="#" class="text-white flex items-center gap-2">View Service
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Karta 3 -->
+  <div class="flex flex-col lg:flex-row lg:gap-8 pt-20 fade-in delay-3">
+    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center border border-white text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+      </svg>
+    </div>
+    <div>
+      <h3 class="text-white pb-5 pt-10 lg:pt-0">Construction Building</h3>
+      <p class="text-white pb-10">We offer comprehensive construction building services for projects of all sizes. With experienced professionals team.</p>
+      <a href="#" class="text-white flex items-center gap-2">View Service
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Karta 4 -->
+  <div class="flex flex-col lg:flex-row lg:gap-8 pt-20 fade-in delay-4">
+    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center border border-white text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+      </svg>
+    </div>
+    <div>
+      <h3 class="text-white pb-5 pt-10 lg:pt-0">Architectural Maintenance</h3>
+      <p class="text-white pb-10">we specialize in creating innovative, functional, and visually stunning architectural designs.</p>
+      <a href="#" class="text-white flex items-center gap-2">View Service
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+<section id="team" aria-label="Nasz zespół" class="py-20 lg:py-40 bg-linear-to-t from-gray-300/20 to-white overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-8 lg:flex lg:items-center lg:gap-16">
+
+    <!-- Lewa strona — tekst 1/3 -->
+    <div class="lg:w-1/3 mb-16 lg:mb-0 flex flex-col gap-8 flex-shrink-0">
+      <h2>Meet With Our Skilled Team</h2>
+      <p>Our team has a proven track record of delivering high-quality work,
+        thanks to their extensive experience in the industry.</p>
+      <a href="#" class="btn">See All Team</a>
+    </div>
+
+    <!-- Prawa strona — zdjęcia 2/3 obok siebie z odstępem -->
+    <div class="lg:w-2/3 flex flex-col gap-6 lg:flex-row lg:gap-4">
+
+      <div class="bg-cover bg-top flex flex-col justify-end h-[50vh] lg:flex-1 lg:h-82 img-zoom fade-in delay-1"
+           style="background-image: url(src/assets/person01.jpg);">
+        <div class="w-full bg-linear-to-t from-black/80 to-transparent px-6 pb-6 pt-20">
+          <p class="text-white font-bold">Adam Lee</p>
+          <p class="text-white text-sm">Consultant Manager</p>
+        </div>
+      </div>
+
+      <div class="bg-cover bg-top flex flex-col justify-end h-[50vh] lg:flex-1 lg:h-82 img-zoom fade-in delay-2"
+           style="background-image: url(src/assets/person02.png);">
+        <div class="w-full bg-linear-to-t from-black/80 to-transparent px-6 pb-6 pt-20">
+          <p class="text-white font-bold">Robert Ruperts</p>
+          <p class="text-white text-sm">CEO</p>
+        </div>
+      </div>
+
+      <div class="bg-cover bg-top flex flex-col justify-end h-[50vh] lg:flex-1 lg:h-82 img-zoom fade-in delay-3"
+           style="background-image: url(src/assets/person03.png);">
+        <div class="w-full bg-linear-to-t from-black/80 to-transparent px-6 pb-6 pt-20">
+          <p class="text-white font-bold">Johnson Chang</p>
+          <p class="text-white text-sm">Construction Manager</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+ <!-- Projects -->
+<section id="projects" aria-label="Nasze projekty — zdjęcie" class="py-20 lg:py-40">
+
+  <!-- Nagłówek -->
+  <div class="max-w-7xl mx-auto px-8 mb-10 lg:flex lg:items-start lg:gap-20">
+    <h2 class="lg:flex-1">Browse <br> Our Projects</h2>
+    <div class="lg:flex-1 flex flex-col gap-6 mt-6 lg:mt-0">
+      <p>Take a look at some of our recent projects to get an idea of the level of quality you can expect when you choose us for your next project.</p>
+      <a href="#" class="flex items-center gap-2">
+        View More Projects
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Wrapper z przyciskami -->
+  <div class="relative">
+
+    <!-- Karty — przewijane poziomo -->
+    <div id="projects-slider"
+     class="flex flex-row overflow-x-auto gap-4 py-10 px-8 lg:gap-6 lg:pr-0 lg:pb-4
+            pl-8 lg:pl-[max(2rem,calc((100vw-1280px)/2+2rem))]"
+     style="scrollbar-width: none; -ms-overflow-style: none;">
+
+  <!-- Karta 1 -->
+  <div class="bg-cover bg-center flex flex-col justify-end h-[40vh] min-w-[80vw] flex-shrink-0
+              lg:h-125 lg:min-w-140"
+       style="background-image: url(src/assets/cards01.jpg);">
+    <div class="w-full bg-linear-to-t from-black to-transparent px-6 pb-6 pt-32">
+      <p class="text-white text-xs tracking-widest mb-2">JANUARY - JULY 2023</p>
+      <a href="#" class="flex items-center justify-between text-white">
+        <p class="font-bold">Construction Building</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Karta 2 -->
+  <div class="bg-cover bg-center flex flex-col justify-end h-[40vh] min-w-[80vw] flex-shrink-0
+              lg:h-125 lg:min-w-140"
+       style="background-image: url(src/assets/cards02.jpg);">
+    <div class="w-full bg-linear-to-t from-black to-transparent px-6 pb-6 pt-32">
+      <p class="text-white text-xs tracking-widest mb-2">JANUARY - JULY 2023</p>
+      <a href="#" class="flex items-center justify-between text-white">
+        <p class="font-bold">Construction Building</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Karta 3 -->
+  <div class="bg-cover bg-center flex flex-col justify-end h-[40vh] min-w-[80vw] flex-shrink-0
+              lg:h-125 lg:min-w-140"
+       style="background-image: url(src/assets/cards03.jpg);">
+    <div class="w-full bg-linear-to-t from-black to-transparent px-6 pb-6 pt-32">
+      <p class="text-white text-xs tracking-widest mb-2">JANUARY - JULY 2023</p>
+      <a href="#" class="flex items-center justify-between text-white">
+        <p class="font-bold">Construction Building</p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+    <!-- Przyciski strzałek — tylko na desktop -->
+    <div class="hidden lg:flex gap-3 max-w-7xl mx-auto px-8 mt-6">
+      <button id="prev-btn"
+              class="w-12 h-12 flex items-center justify-center rounded-full border border-dark hover:bg-dark hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button id="next-btn"
+              class="w-12 h-12 flex items-center justify-center rounded-full border border-dark hover:bg-dark hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- How It Works -->
+    <section id="how" class="bg-black pb-20 lg:py-40">
+
+       <!-- Nagłówek -->
+      <div class="max-w-7xl mx-auto px-8 py-20 lg:py-0 lg:pb-20 flex flex-col gap-10
+              lg:flex-row lg:items-center lg:justify-between">
+         <h2 class="text-white">We Define <br> The Dream Building</h2>
+         <p class="text-white">ABOUT OUR PROCESS</p>
+      </div>
+
+  <!-- Process Steps -->
+   
+
+  <div class="max-w-7xl mx-auto px-8 flex flex-col gap-10 pb-10
+              lg:flex-row lg:gap-20">
+
+     <!-- Krok 1 -->
+
+      <div class="flex flex-col lg:flex-1 fade-in delay-1">
+    
+    <div class="flex gap-4 my-10 text-white">
+        <div class="w-20 h-14 flex items-center justify-center rounded-full border border-white">
+          <h3>01.</h3>
+        </div>
+
+ <div class="w-50 h-14 flex items-center justify-center rounded-full border border-white">
+<h3>Discuss</h3>
+        </div>
+    </div>
+      <div class="text-white">
+         <p class="pb-10">We believe that effective communication is key to the success of any project. 
+          That's why we have a structured discussion process in place to ensure that all of your needs and concerns are addressed.</p>
+         <p class="font-bold pb-10">Consultation | Design Ideation</p>  
+      </div>
+      </div>
+
+       <!-- Krok 2 -->
+
+      <div class="flex flex-col lg:flex-1 fade-in delay-2">
+    
+    <div class="flex gap-4 my-10 text-white">
+        <div class="w-20 h-14 flex items-center justify-center rounded-full border border-white">
+          <h3>02.</h3>
+        </div>
+
+        <div class="w-50 h-14 flex items-center justify-center rounded-full border border-white">
+          <h3>Observe</h3>
+        </div>
+    </div>
+      <div class="text-white">
+         <p class="pb-10">We have a structured observation process in place to ensure that you are informed and involved every step of the way. 
+          It's important to have a clear understanding of what is happening on site</p>
+         <p class="font-bold pb-10">Ground Observation | Planning</p>  
+      </div>
+      </div>
+
+       <!-- Krok 3 -->
+
+      <div class="flex flex-col lg:flex-1 fade-in delay-3">
+    
+    <div class="flex gap-4 my-10 text-white">
+        <div class="w-20 h-14 flex items-center justify-center rounded-full border border-white">
+          <h3>03.</h3>
+        </div>
+
+        <div class="w-50 h-14 flex items-center justify-center rounded-full border border-white">
+          <h3>Execute</h3>
+        </div>
+    </div>
+      <div class="text-white">
+         <p class="pb-10">The architect works with the contractors during the construction process to ensure that the project is being built according to the design and specifications.
+          The architect may be involved in final inspections</p>
+         <p class="font-bold pb-10">Contracting | Corrective Action</p>  
+      </div>
+      </div>
+  </div>
+      
+</section>
+
+
+<!-- REVIEWS -->
+<section id="reviews" class="py-20 lg:py-40">
+
+  <div class="max-w-7xl mx-auto px-8">
+
+    <h2 class="mb-12">Our Reviews From Clients</h2>
+
+    <!-- ZMIANA: lg:grid lg:grid-cols-2 — dwie kolumny na desktop -->
+    <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
+
+      <!-- Recenzja 1 -->
+       
+      <article class="border-t border-gray-800 py-10">
+        <blockquote>
+        <p class="mb-8">"I recently worked with the team on the design and construction of my new home. From the initial consultation to the final walkthrough, the team was professional, responsive, and dedicated to meeting my needs and my expectations."</p>
+         </blockquote>
+        <!-- ZMIANA: justify-between — zdjęcie+imię po lewej, gwiazdki po prawej -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img src="src/assets/person01.jpg" alt="Hannah Barbera" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <p class="font-bold">Hannah Barbera</p>
+              <p>Hyarta Appartment</p>
+            </div>
+          </div>
+          <div class="text-amber-400 text-xl">★★★★★</div>
+        </div>
+      </article>
+
+      <!-- Recenzja 2 -->
+      <article class="border-t border-gray-800 py-10">
+
+        <blockquote>
+          <p class="mb-8">"The design they came up with was exactly what I had hoped for, and they were able to bring it to life with attention to detail and high-quality craftsmanship. They also navigated any challenges that arose during the construction process."</p>
+        </blockquote>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img src="src/assets/person02.png" alt="Adam Lee" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <p class="font-bold">Adam Lee</p>
+              <p>Sore Resort</p>
+            </div>
+          </div>
+          <div class="text-amber-400 text-xl">★★★★★</div>
+        </div>
+      </article>
+
+      <!-- Recenzja 3 -->
+      <article class="border-t border-gray-800 py-10">
+        <blockquote>
+          <p class="mb-8">"The design they came up with was exactly what I had hoped for, and they were able to bring it to life with attention to detail and high-quality craftsmanship. They also navigated any challenges that arose during the construction process."</p>
+        </blockquote>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img src="src/assets/person03.png" alt="Cyntia Leornardo" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <p class="font-bold">Cyntia Leornardo</p>
+              <p>The Continental Hotel</p>
+            </div>
+          </div>
+          <div class="text-amber-400 text-xl">★★★★★</div>
+        </div>
+      </article>
+
+      <!-- Recenzja 4 -->
+      <article class="border-t border-gray-800 py-10">
+        <blockquote>
+          <p class="mb-8">"I recently worked with the team on the design and construction of my new home. From the initial consultation to the final walkthrough, the team was professional, responsive, and dedicated to meeting my needs and my expectations."</p>
+        </blockquote>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img src="src/assets/person01.jpg" alt="Mike Pordan" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <p class="font-bold">Mike Pordan</p>
+              <p>Red doors Owner</p>
+            </div>
+          </div>
+          <div class="text-amber-400 text-xl">★★★★★</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!--  FORMULARZ KONTAKTOWY Z WALIDACJĄ                          -->
+<!--  Zastąp istniejący <form> w sekcji #contact               -->
+<!-- ============================================================ -->
+
+<!-- CTA + FORMULARZ -->
+<section id="contact" class="bg-black py-20 lg:py-40">
+  <div class="max-w-7xl mx-auto px-8 lg:flex lg:gap-20 lg:items-start">
+
+    <!-- Lewa strona — tekst (1/3) -->
+    <div class="lg:w-1/3 mb-16 lg:mb-0">
+      <h2 class="text-white mb-6">Have Dream House to Build?</h2>
+      <p class="text-white">Ready to start your dream project.
+        Fill in the form and we will get back to you within 24 hours.</p>
+    </div>
+
+    <!-- Prawa strona — formularz (2/3) -->
+    <!-- ZMIANA: dodano id="contact-form" i novalidate -->
+    <form id="contact-form" class="flex flex-col gap-6 lg:w-2/3" novalidate>
+
+      <!-- Full Name -->
+      <div class="flex flex-col gap-2">
+        <label for="name" class="text-white text-sm">Full Name</label>
+        <input id="name" name="name"
+          type="text"
+          placeholder="John Doe"
+          class="bg-transparent border border-white/30 text-white placeholder:text-white/40 px-4 py-3 rounded-full focus:outline-none focus:border-white transition">
+        <!-- NOWE: komunikat błędu -->
+        <p id="error-name" class="text-red-400 text-sm hidden"></p>
+      </div>
+
+      <!-- Email -->
+      <div class="flex flex-col gap-2">
+        <label for="email" class="text-white text-sm">Email</label>
+        <input id="email" name="email"
+          type="email"
+          placeholder="john@example.com"
+          class="bg-transparent border border-white/30 text-white placeholder:text-white/40 px-4 py-3 rounded-full focus:outline-none focus:border-white transition">
+        <!-- NOWE: komunikat błędu -->
+        <p id="error-email" class="text-red-400 text-sm hidden"></p>
+      </div>
+
+      <!-- Phone -->
+      <div class="flex flex-col gap-2">
+        <label for="phone" class="text-white text-sm">Phone</label>
+        <input id="phone" name="phone"
+          type="tel"
+          placeholder="+48 000 000 000"
+          class="bg-transparent border border-white/30 text-white placeholder:text-white/40 px-4 py-3 rounded-full focus:outline-none focus:border-white transition">
+        <!-- NOWE: komunikat błędu -->
+        <p id="error-phone" class="text-red-400 text-sm hidden"></p>
+      </div>
+
+      <!-- Message -->
+      <div class="flex flex-col gap-2">
+        <label for="message" class="text-white text-sm">Message</label>
+        <textarea id="message" name="message"
+          rows="4"
+          placeholder="Tell us about your project..."
+          class="bg-transparent border border-white/30 text-white placeholder:text-white/40 px-4 py-3 rounded-2xl focus:outline-none focus:border-white transition resize-none"></textarea>
+        <!-- NOWE: komunikat błędu -->
+        <p id="error-message" class="text-red-400 text-sm hidden"></p>
+      </div>
+
+      <!-- NOWE: komunikat sukcesu — pojawi się po poprawnym wypełnieniu -->
+      <p id="success-msg" class="text-green-400 text-sm hidden">
+        ✓ Wiadomość wysłana! Odezwiemy się wkrótce.
+      </p>
+
+      <button type="submit" class="btn mt-4">
+        Send Message
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </button>
+
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-gray-100 py-20">
+
+  <div class="max-w-7xl mx-auto px-8">
+
+    <!-- ZMIANA: lg:flex lg:justify-between — lewa i prawa strona obok siebie -->
+    <div class="lg:flex lg:justify-between lg:gap-20 mb-16">
+
+      <!-- Lewa strona: logo + newsletter -->
+      <div class="lg:max-w-xs">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-4 mb-12">
+          <img src="./src/assets/logo.svg" alt="Architech Agency logo" class="h-10">
+
+        </div>
+
+        <!-- Newsletter -->
+        <p class="text-xs tracking-widest mb-6">Sign up for our monthly newsletter</p>
+        <div class="flex">
+          <input
+            type="email"
+            placeholder="Email address"
+            class="flex-1 w-full min-w-70  bg-white px-4 py-3 text-sm focus:outline-none border border-gray-300"
+          >
+          <button class="bg-primary px-5 flex items-center justify-center hover:opacity-90 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Prawa strona: linki — ZMIANA: lg:grid-cols-3 — 3 kolumny na desktop -->
+      <div class="grid grid-cols-2 gap-10 mt-16 lg:mt-0 lg:grid-cols-3 lg:gap-20">
+
+        <!-- Work -->
+        <div class="flex flex-col gap-4">
+          <p class="text-xs tracking-widest uppercase mb-2">Work</p>
+          <a href="#" class="text-sm hover:text-primary transition">Services</a>
+          <a href="#" class="text-sm hover:text-primary transition">Industries</a>
+          <a href="#" class="text-sm hover:text-primary transition">Projects</a>
+          <a href="#" class="text-sm hover:text-primary transition">See all</a>
+        </div>
+
+        <!-- Company -->
+        <div class="flex flex-col gap-4">
+          <p class="text-xs tracking-widest uppercase mb-2">Company</p>
+          <a href="#" class="text-sm hover:text-primary transition">About</a>
+          <a href="#" class="text-sm hover:text-primary transition">Contact</a>
+          <a href="#" class="text-sm hover:text-primary transition">Careers</a>
+          <a href="#" class="text-sm hover:text-primary transition">News</a>
+        </div>
+
+        <!-- Social -->
+        <div class="flex flex-col gap-4">
+          <p class="text-xs tracking-widest uppercase mb-2">Social</p>
+          <a href="#" class="text-sm hover:text-primary transition">Linkedin</a>
+          <a href="#" class="text-sm hover:text-primary transition">Facebook</a>
+          <a href="#" class="text-sm hover:text-primary transition">YouTube</a>
+          <a href="#" class="text-sm hover:text-primary transition">Instagram</a>
+          <a href="#" class="text-sm hover:text-primary transition">Twitter</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <hr class="mb-6">
+    <p class="text-sm">2026 | Interiuz © All rights reserved.</p>
+
+  </div>
+
+</footer>
+ 
+<script>
+  // === HAMBURGER MENU ===
+  const btn = document.getElementById('menu-btn')
+  const menu = document.getElementById('mobile-menu')
+  const iconOpen = document.getElementById('icon-open')
+  const iconClose = document.getElementById('icon-close')
+
+  btn.addEventListener('click', () => {
+    const isOpen = !menu.classList.contains('hidden')
+    menu.classList.toggle('hidden')
+    iconOpen.classList.toggle('hidden', !isOpen)
+    iconClose.classList.toggle('hidden', isOpen)
+  })
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden')
+      iconOpen.classList.remove('hidden')
+      iconClose.classList.add('hidden')
+    })
+  })
+
+  // === SLIDER PROJEKTÓW ===
+  const slider = document.getElementById('projects-slider')
+  const prevBtn = document.getElementById('prev-btn')
+  const nextBtn = document.getElementById('next-btn')
+  const scrollAmount = 580
+
+  nextBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+  })
+
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' })
+  })
+
+  slider.style.msOverflowStyle = 'none'
+  slider.style.scrollbarWidth = 'none'
+
+  // === FADE-IN PRZY SCROLLOWANIU ===
+  const fadeElements = document.querySelectorAll('.fade-in')
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible')
+        // Po animacji przestajemy obserwować — nie animuje ponownie
+        observer.unobserve(entry.target)
+      }
+    })
+  }, {
+    threshold: 0.15,      // element musi być w 15% widoczny
+    rootMargin: '0px 0px -50px 0px'  // animuje trochę przed krawędzią
+  })
+
+  fadeElements.forEach(el => observer.observe(el))
+
+  // === CIEŃ NA NAV PRZY SCROLLU ===
+  const nav = document.querySelector('nav')
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      nav.classList.add('scrolled')
+    } else {
+      nav.classList.remove('scrolled')
+    }
+  })
+  
+  // === SLIDER TEKSTÓW W HERO ===
+const slides = [
+  'Take a look at some of our recent projects to get an idea of the level of quality you can expect when you choose us for your next project.',
+  'We have completed over 340 projects across residential and commercial sectors, each one crafted with precision and care.',
+  'Our team of award-winning architects brings your vision to life — from initial concept to final walkthrough.'
+]
+
+let currentSlide = 0
+const slideText = document.getElementById('slide-text')
+const dots = document.querySelectorAll('.dot')
+
+function updateSlide(index) {
+  slideText.style.opacity = '0'
+
+  setTimeout(() => {
+    slideText.textContent = slides[index]
+    slideText.style.opacity = '1'
+  }, 300)
+
+  dots.forEach((dot, i) => {
+    dot.style.opacity = i === index ? '1' : '0.4'
+  })
+}
+
+document.getElementById('hero-next').addEventListener('click', () => {
+  currentSlide = (currentSlide + 1) % slides.length
+  updateSlide(currentSlide)
+})
+
+document.getElementById('hero-prev').addEventListener('click', () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length
+  updateSlide(currentSlide)
+})
+
+// === WALIDACJA FORMULARZA ===
+const form = document.getElementById('contact-form')
+ 
+// Funkcja pokazująca błąd przy polu
+function showError(fieldId, message) {
+  // Znajdź div na komunikat błędu
+  const errorEl = document.getElementById('error-' + fieldId)
+  errorEl.textContent = message           // wpisz tekst błędu
+  errorEl.classList.remove('hidden')      // pokaż komunikat
+ 
+  // Czerwona ramka na polu
+  const field = document.getElementById(fieldId)
+  field.classList.add('border-red-400')
+  field.classList.remove('border-white/30')
+}
+ 
+// Funkcja ukrywająca błąd
+function clearError(fieldId) {
+  const errorEl = document.getElementById('error-' + fieldId)
+  errorEl.classList.add('hidden')         // ukryj komunikat
+  errorEl.textContent = ''
+ 
+  // Przywróć normalną ramkę
+  const field = document.getElementById(fieldId)
+  field.classList.remove('border-red-400')
+  field.classList.add('border-white/30')
+}
+ 
+// Główna funkcja walidacji — zwraca true jeśli wszystko ok
+function validateForm() {
+  let isValid = true
+ 
+  // Pobierz wartości z pól (trim() usuwa białe znaki)
+  const name    = document.getElementById('name').value.trim()
+  const email   = document.getElementById('email').value.trim()
+  const phone   = document.getElementById('phone').value.trim()
+  const message = document.getElementById('message').value.trim()
+ 
+  // --- Walidacja imienia ---
+  if (name === '') {
+    showError('name', 'Imię i nazwisko jest wymagane')
+    isValid = false
+  } else {
+    clearError('name')
+  }
+ 
+  // --- Walidacja emaila ---
+  if (email === '') {
+    showError('email', 'Email jest wymagany')
+    isValid = false
+  } else if (!email.includes('@')) {
+    showError('email', 'Podaj poprawny adres email')
+    isValid = false
+  } else {
+    clearError('email')
+  }
+ 
+  // --- Walidacja telefonu ---
+  if (phone === '') {
+    showError('phone', 'Numer telefonu jest wymagany')
+    isValid = false
+  } else {
+    clearError('phone')
+  }
+ 
+  // --- Walidacja wiadomości ---
+  if (message === '') {
+    showError('message', 'Wiadomość jest wymagana')
+    isValid = false
+  } else if (message.length < 10) {
+    showError('message', 'Wiadomość musi mieć co najmniej 10 znaków')
+    isValid = false
+  } else {
+    clearError('message')
+  }
+ 
+  return isValid
+}
+ 
+// Nasłuchuj na submit formularza
+form.addEventListener('submit', (e) => {
+  e.preventDefault()    // zablokuj domyślne wysyłanie strony!
+ 
+  if (validateForm()) {
+    // Formularz poprawny — pokaż komunikat sukcesu
+    const successMsg = document.getElementById('success-msg')
+    successMsg.classList.remove('hidden')
+ 
+    // Wyczyść formularz po wysyłce
+    form.reset()
+ 
+    // Ukryj komunikat sukcesu po 5 sekundach
+    setTimeout(() => {
+      successMsg.classList.add('hidden')
+    }, 5000)
+  }
+})
+ 
+// Usuń błąd gdy użytkownik zaczyna pisać w danym polu
+['name', 'email', 'phone', 'message'].forEach(fieldId => {
+  const field = document.getElementById(fieldId)
+  field.addEventListener('input', () => {
+    clearError(fieldId)
+  })
+})
+</script>
+
+</body>
+</html>
